@@ -35,9 +35,9 @@ const elfInventories = fileContents
   .split('\n\n')
   .map((line) => line.split('\n'))
   .map((textInventories) =>
-    textInventories
-      .filter((textInventory) => textInventory !== '')
-      .map((textInventory) => Number.parseInt(textInventory))
+    textInventories.map((textInventory) =>
+      textInventory === '' ? 0 : Number.parseInt(textInventory)
+    )
   );
 
 const elfInventoriesSummed = elfInventories.map((inventory) =>
