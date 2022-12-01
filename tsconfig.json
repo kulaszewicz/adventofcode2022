@@ -1,0 +1,26 @@
+{
+  "compileOnSave": false,
+  "extends": "@tsconfig/node14/tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "node",
+    "importHelpers": true,
+    "target": "esnext",
+    "module": "commonjs",
+    "emitDecoratorMetadata": false,
+    "removeComments": false,
+    "allowSyntheticDefaultImports": false,
+    "lib": ["es2020", "dom"]
+  },
+}

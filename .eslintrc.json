@@ -1,0 +1,68 @@
+{
+  "root": true,
+  "overrides": [
+    {
+      "files": ["*.js"],
+      "extends": [
+        "eslint:recommended",
+        "plugin:eslint-comments/recommended",
+        "plugin:unicorn/recommended",
+        "plugin:sonarjs/recommended",
+        "prettier"
+      ]
+    },
+    {
+      "files": ["*.ts"],
+      "parserOptions": {
+        "project": ["tsconfig.eslint.json"],
+        "createDefaultProgram": true
+      },
+      "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking",
+        "plugin:eslint-comments/recommended",
+        "plugin:unicorn/recommended",
+        "plugin:sonarjs/recommended",
+        "prettier"
+      ],
+      "rules": {
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "prefix": "app",
+            "style": "kebab-case",
+            "type": "element"
+          }
+        ],
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "prefix": "app",
+            "style": "camelCase",
+            "type": "attribute"
+          }
+        ],
+        "@typescript-eslint/no-unused-vars": [
+          "error",
+          {
+            "args": "all",
+            "argsIgnorePattern": "^_",
+            "caughtErrors": "all",
+            "caughtErrorsIgnorePattern": "^_",
+            "destructuredArrayIgnorePattern": "^_",
+            "ignoreRestSiblings": false,
+            "vars": "all",
+            "varsIgnorePattern": "^_"
+          }
+        ],
+        "@typescript-eslint/unbound-method": [
+          "error",
+          {
+            "ignoreStatic": true
+          }
+        ]
+      }
+    }
+  ]
+}
